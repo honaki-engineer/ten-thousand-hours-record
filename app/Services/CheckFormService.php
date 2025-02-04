@@ -1,29 +1,29 @@
 <?php 
 namespace App\Services;
 
-class checkFormService
+class CheckFormService
 {
   // ----- index -----
   public static function checkStatusThrough($posts) {
       // statusカラム：数字(DB側)→日本語の単語(クライアント側)に変更
-      // コレクション型のため、transformを使用
-      $posts->through(function ($post) {
-        if($post->status === 1){ $post->status = '仕事';}
-        if($post->status === 2){ $post->status = '休み';}
-        if($post->status === 3){ $post->status = 'その他';}
+      $posts = $posts->through(function ($post) {
+        if ($post->status === 1) { $post->status_label = '仕事'; }
+        if ($post->status === 2) { $post->status_label = '休み'; }
+        if ($post->status === 3) { $post->status_label = 'その他'; }
         return $post;
-      });
-  }
+      }); 
+
+      return $posts;
+    }
 
   // ----- show -----
   public static function checkStatus($post) {
       // statusカラム：数字(DB側)→日本語の単語(クライアント側)に変更
-      // 表示用の変数
-      if($post->status === 1){ $status = '仕事';}
-      if($post->status === 2){ $status = '休み';}
-      if($post->status === 3){ $status = 'その他';}
+      if($post->status === 1){ $post->status_label = '仕事';}
+      if($post->status === 2){ $post->status_label = '休み';}
+      if($post->status === 3){ $post->status_label = 'その他';}
 
-      return $status;
+      return $post;
   }
 
   

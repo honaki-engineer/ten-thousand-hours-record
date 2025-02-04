@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\PostForm;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Services\checkFormService;
+use App\Services\CheckFormService;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use Illuminate\Support\Facades\Auth;
@@ -28,12 +28,12 @@ class PostFormController extends Controller
             $post->hours = floor($post->study_seconds / 3600);
             $post->minutes = floor(($post->study_seconds % 3600) / 60);
             return $post;
-        });  
+        }); 
 
         // statusカラム：数字(DB側)→日本語の単語(クライアント側)に変更
-        $status = checkFormService::checkStatusThrough($posts);
-        
-        return view('posts.index', compact('posts', 'status'));
+        $posts = CheckFormService::checkStatusThrough($posts);
+
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -87,9 +87,9 @@ class PostFormController extends Controller
         $post->minutes = floor(($post->study_seconds % 3600) / 60);
 
         // statusカラム：数字(DB側)→日本語の単語(クライアント側)に変更
-        $status = checkFormService::checkStatus($post);
+        $post = CheckFormService::checkStatus($post);
 
-        return view('posts.show', compact('post', 'status'));
+        return view('posts.show', compact('post'));
     }
 
     /**

@@ -30,7 +30,8 @@
                           </td>
                           <td class="border-t-2 border-gray-200 px-4 py-3">{{ $post->date }}</td>
                           <td class="border-t-2 border-gray-200 px-4 py-3">{{ $post->hours }}時間{{ $post->minutes }}分</td>
-                          <td class="border-t-2 border-gray-200 px-4 py-3">{{ $status }}</td>
+                          <td class="border-t-2 border-gray-200 px-4 py-3">{{ $post->status_label }}</td>
+                          {{-- <td class="border-t-2 border-gray-200 px-4 py-3">{{ $status }}</td> --}}
                           <td class="border-t-2 border-gray-200 px-4 py-3">{{ $post->comment }}</td>
                         </tr>
                         @endforeach
@@ -42,12 +43,12 @@
           </div>
       </div>
   </div>
-      <!-- フローティングボタン -->
-    <a href="{{ route('posts.create') }}"
-       class="sm:hidden fixed z-50 bottom-4 right-4 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700">
-        <!-- アイコン（プラス記号） -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-        </svg>
-    </a>
+  <!-- フローティングボタン -->
+  <a href="{{ route('posts.create') }}"
+      class="sm:hidden fixed z-50 bottom-4 right-4 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700">
+      <!-- アイコン（プラス記号） -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+      </svg>
+  </a>
 </x-app-layout>

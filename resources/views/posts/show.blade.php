@@ -31,7 +31,7 @@
                         <div class="p-2 w-full">
                             <div class="relative">
                                 <label for="status" class="leading-7 text-sm text-gray-600">状態</label>
-                                <div class="w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">{{ $status }}</div>
+                                <div class="w-full rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">{{ $post->status_label }}</div>
                             </div>
                         </div>
                         <div class="p-2 w-full">
