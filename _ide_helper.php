@@ -16540,7 +16540,7 @@ namespace Barryvdh\Debugbar\Facades {
                     /**
          * Sets the storage backend to use to store the collected data
          *
-         * @param \DebugBar\StorageInterface $storage
+         * @param \DebugBar\Storage\StorageInterface|null $storage
          * @return \Barryvdh\Debugbar\LaravelDebugbar 
          * @static 
          */        public static function setStorage($storage = null)
