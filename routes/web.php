@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostFormController;
 use App\Http\Controllers\TrackersController;
+use App\Http\Controllers\GuestLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use App\Http\Controllers\TrackersController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// ゲストログイン用
+Route::get('/guest-login', [GuestLoginController::class, 'login'])->name('guest.login');
 
 // リソースコントローラー
 Route::middleware('auth')->group(function () {
