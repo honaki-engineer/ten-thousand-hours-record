@@ -23,12 +23,6 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('aaaaaaaa'),
                 'created_at' => now(),
             ],
-            [
-                'name' => 'b',
-                'email' => 'b@b.b',
-                'password' => Hash::make('bbbbbbbb'),
-                'created_at' => now(),
-            ]
         ]);
     }
 }
