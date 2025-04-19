@@ -14,7 +14,7 @@
     <header class="bg-gray-200 shadow">
         <div class="container mx-auto">
             <div class="px-4 py-4 flex justify-between items-center">
-                <a href="{{ url('/') }}">
+                <a href="{{ route('trackers.index') }}">
                     <h1 class="text-xl font-bold">1万時間学習記録</h1>
                 </a>
             </div>
@@ -27,7 +27,7 @@
         <p class="mb-6">{!! $message !!}</p>
         <button type="submit"
             class="bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition text-lg">
-                <a href="{{ url('/') }}">トップページはこちら</a>
+                <a href="{{ route('trackers.index') }}">1万時間記録に戻る</a>
         </button>
     </main>
 
