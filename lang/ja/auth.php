@@ -16,4 +16,16 @@ return [
     'failed' => 'ログイン情報が登録されていません。',
     'throttle' => 'ログインに続けて失敗しています。:seconds秒後に再度お試しください。',
 
+    // ログイン画面
+    'email' => 'メールアドレス',
+    'password' => 'パスワード',
+    'login' => 'ログイン',
+    'remember_me' => '次回から自動ログイン',
+    'forgot_your_password?' => 'パスワードをお忘れの方はこちら',
+    
+    // 新規登録画面
+    'name' => '名前',
+    'confirm_password' => 'パスワード(再確認)',
+    'already_registered?' => '登録済みの方はこちら',
+    'register' => '新規登録',
 ];
