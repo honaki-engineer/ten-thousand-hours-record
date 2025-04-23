@@ -160,6 +160,7 @@ return [
       'minutes' => '分',
       'status' => '状態',
       'comment' => 'コメント',
+      'current_password' => '現在のパスワード',
     ],
 
 ];

@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Profile Information') }}
+            {{ __('profile.profile_information') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("profile.Update your account's profile information and email address.") }}
         </p>
     </header>
 
@@ -18,7 +18,7 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('profile.name')" />
             {{-- <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" /> --}}
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" 
                 :readonly="Auth::user()->isGuest()" />
@@ -26,7 +26,7 @@
         </div>
 
         <div>
-            <x-input-label for="email" :value="__('Email')" />
+            <x-input-label for="email" :value="__('profile.email')" />
             {{-- <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" /> --}}
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username"
                 :readonly="Auth::user()->isGuest()" />
@@ -67,11 +67,11 @@
         <div class="flex items-center gap-4">
             @if(Auth::user()->isGuest())
                 <x-primary-button disabled class="opacity-50 cursor-not-allowed">
-                    {{ __('Save') }}
+                    {{ __('profile.save') }}
                 </x-primary-button>
             @else
                 <x-primary-button>
-                    {{ __('Save') }}
+                    {{ __('profile.save') }}
                 </x-primary-button>
             @endif
         
@@ -82,7 +82,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600"
-                >{{ __('Saved.') }}</p>
+                >{{ __('profile.saved.') }}</p>
             @endif
         </div>  
     </form>
