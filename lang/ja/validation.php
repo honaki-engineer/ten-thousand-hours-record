@@ -161,6 +161,8 @@ return [
       'status' => '状態',
       'comment' => 'コメント',
       'current_password' => '現在のパスワード',
+      'name' => '名前',
+      'email' => 'メールアドレス',
     ],
 
 ];
