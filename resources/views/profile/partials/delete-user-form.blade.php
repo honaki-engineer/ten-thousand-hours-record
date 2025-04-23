@@ -41,6 +41,8 @@
 
             <div class="mt-6">
                 <x-input-label for="password" value="{{ __('password') }}" class="sr-only" />
+                
+                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
 
                 <x-text-input
                     id="password"
@@ -49,8 +51,6 @@
                     class="mt-1 block w-3/4"
                     placeholder="{{ __('profile.password') }}"
                 />
-
-                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
             </div>
 
             <div class="mt-6 flex justify-end">
@@ -61,16 +61,16 @@
                 {{-- <x-danger-button class="ml-3">
                     {{ __('Delete Account') }}
                 </x-danger-button> --}}
+                
                 @if(Auth::user()->isGuest())
-                    <x-danger-button disabled class="opacity-50 cursor-not-allowed">
-                        {{ __('profile.delete_account.') }}
+                    {{-- 表示はされるが無効化 --}}
+                    <x-danger-button class="ml-3 opacity-50 cursor-not-allowed" disabled>
+                        {{ __('profile.delete_account') }}
                     </x-danger-button>
                 @else
-                    <x-danger-button
-                        x-data=""
-                        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
-                    >
-                        {{ __('profile.delete_account.') }}
+                    {{-- 通常ユーザー用 --}}
+                    <x-danger-button type="submit" class="ml-3">
+                        {{ __('profile.delete_account') }}
                     </x-danger-button>
                 @endif
             </div>
