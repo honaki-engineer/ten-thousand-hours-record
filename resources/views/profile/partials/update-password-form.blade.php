@@ -14,27 +14,27 @@
         @method('put')
 
         <div>
-            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
             <x-input-label for="current_password" :value="__('profile.current_password')" />
             {{-- <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" /> --}}
             <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password"
                 :readonly="Auth::user()->isGuest()" />
+            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
             <x-input-label for="password" :value="__('profile.new_password')" />
             {{-- <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" /> --}}
             <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password"
                 :readonly="Auth::user()->isGuest()" />
+            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
             <x-input-label for="password_confirmation" :value="__('profile.confirm_password')" />
             {{-- <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" /> --}}
             <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password"
                 :readonly="Auth::user()->isGuest()" />
+            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
         </div>
 
         {{-- <div class="flex items-center gap-4">
