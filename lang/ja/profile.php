@@ -18,7 +18,7 @@ return [
     'Ensure your account is using a long, random password to stay secure.' => 'アカウントを安全に保つため、長くてランダムなパスワードを使用してください。',
     'current_password' => '現在のパスワード',
     'new_password' => '新しいパスワード',
-    'confirm_password' => '新しいパスワード(再確認)',
+    'new_confirm_password' => '新しいパスワード(再確認)',
     
     // /views/profile/partials/delete-user-form.blade.php
     'delete_account' => 'アカウント削除',

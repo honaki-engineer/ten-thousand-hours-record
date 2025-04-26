@@ -163,6 +163,7 @@ return [
       'current_password' => '現在のパスワード',
       'name' => '名前',
       'email' => 'メールアドレス',
+      'new_password' => '新しいパスワード',
     ],
 
 ];
