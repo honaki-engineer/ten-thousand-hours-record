@@ -11,15 +11,6 @@
           <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 text-gray-900">
 
-            {{-- バリデーションエラーメッセージ --}}
-            @if($errors->any())
-            @foreach($errorNames as $errorName)
-                @if($errors->has($errorName))
-                <x-input-error :messages="$errors->get($errorName)" class="mt-2" />
-                @endif
-            @endforeach
-            @endif
-
             {{-- tailblocksのフォーム --}}
             <section class="text-gray-600 body-font relative">
                 <form action="{{ route('posts.update', ['post' => $post->id]) }}" method="POST">
@@ -32,6 +23,7 @@
                             <div class="relative">
                             <label for="date" class="leading-7 text-sm text-gray-600">学習日</label>
                             <input type="date" id="date" name="date" value="{{ $post->date }}" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            <x-input-error :messages="$errors->get('date')" class="mt-2" />
                             </div>
                         </div>
                         <div class="p-2 w-1/2">
@@ -51,6 +43,8 @@
                                     @endfor
                                 </select>
                                 <p class="text-sm text-gray-600">分</p>
+                                <x-input-error :messages="$errors->get('hours')" class="mt-2" />
+                                <x-input-error :messages="$errors->get('minutes')" class="mt-2" />
                             </div>
                         </div>
                         <div class="p-2 w-full">
@@ -62,12 +56,14 @@
                                 <option value="2" @if($post->status === 2) selected @endif>休み</option>
                                 <option value="3" @if($post->status === 3) selected @endif>その他</option>
                             </select>
+                            <x-input-error :messages="$errors->get('status')" class="mt-2" />
                             </div>
                         </div>
                         <div class="p-2 w-full">
                             <div class="relative">
                             <label for="comment" class="leading-7 text-sm text-gray-600">コメント</label>
                             <textarea id="comment" name="comment" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out">{{ $post->comment }}</textarea>
+                            <x-input-error :messages="$errors->get('comment')" class="mt-2" />
                             </div>
                         </div>
                         <div class="p-2 w-full">
