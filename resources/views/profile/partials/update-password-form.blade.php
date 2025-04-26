@@ -15,22 +15,22 @@
 
         <div>
             <x-input-label for="current_password" :value="__('profile.current_password')" />
-            <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password"
-                :readonly="Auth::user()->isGuest()" />
+            <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full"
+                autocomplete="current-password" :readonly="Auth::user()->isGuest()" />
             <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
         </div>
 
         <div>
             <x-input-label for="new_password" :value="__('profile.new_password')" />
-            <x-text-input id="new_password" name="new_password" type="password" class="mt-1 block w-full" autocomplete="new-password"
-                :readonly="Auth::user()->isGuest()" />
+            <x-text-input id="new_password" name="new_password" type="password" class="mt-1 block w-full"
+                autocomplete="new-password" :readonly="Auth::user()->isGuest()" />
             <x-input-error :messages="$errors->updatePassword->get('new_password')" class="mt-2" />
         </div>
 
         <div>
             <x-input-label for="new_password_confirmation" :value="__('profile.new_confirm_password')" />
-            <x-text-input id="new_password_confirmation" name="new_password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password"
-                :readonly="Auth::user()->isGuest()" />
+            <x-text-input id="new_password_confirmation" name="new_password_confirmation" type="password"
+                class="mt-1 block w-full" autocomplete="new-password" :readonly="Auth::user()->isGuest()" />
             <x-input-error :messages="$errors->updatePassword->get('new_password_confirmation')" class="mt-2" />
         </div>
 
@@ -48,7 +48,7 @@
             @endif
         </div> --}}
         <div class="flex items-center gap-4">
-            @if(Auth::user()->isGuest())
+            @if (Auth::user()->isGuest())
                 <x-primary-button disabled class="opacity-50 cursor-not-allowed">
                     {{ __('profile.save') }}
                 </x-primary-button>
@@ -57,15 +57,10 @@
                     {{ __('profile.save') }}
                 </x-primary-button>
             @endif
-        
+
             @if (session('status') === 'password-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600"
-                >{{ __('profile.saved.') }}</p>
+                <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                    class="text-sm text-gray-600">{{ __('profile.saved.') }}</p>
             @endif
         </div>
     </form>
