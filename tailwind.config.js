@@ -8,6 +8,11 @@ module.exports = {
         './resources/views/**/*.blade.php',
     ],
 
+    safelist: [
+        // ログイン画面
+        'mb-2',
+      ],
+
     theme: {
         extend: {
             fontFamily: {
