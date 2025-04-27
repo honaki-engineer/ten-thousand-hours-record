@@ -21,17 +21,17 @@
         </div>
 
         <div>
-            <x-input-label for="new_password" :value="__('profile.new_password')" />
-            <x-text-input id="new_password" name="new_password" type="password" class="mt-1 block w-full"
+            <x-input-label for="password" :value="__('profile.new_password')" />
+            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full"
                 autocomplete="new-password" :readonly="Auth::user()->isGuest()" />
-            <x-input-error :messages="$errors->updatePassword->get('new_password')" class="mt-2" />
+            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-label for="new_password_confirmation" :value="__('profile.new_confirm_password')" />
-            <x-text-input id="new_password_confirmation" name="new_password_confirmation" type="password"
+            <x-input-label for="password_confirmation" :value="__('profile.new_confirm_password')" />
+            <x-text-input id="password_confirmation" name="password_confirmation" type="password"
                 class="mt-1 block w-full" autocomplete="new-password" :readonly="Auth::user()->isGuest()" />
-            <x-input-error :messages="$errors->updatePassword->get('new_password_confirmation')" class="mt-2" />
+            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
         </div>
 
         {{-- <div class="flex items-center gap-4">
