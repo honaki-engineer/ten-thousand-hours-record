@@ -31,7 +31,7 @@ return [
         'array'   => ':attributeは、:min個から:max個の間で指定してください。',
     ],
     'boolean'              => ':attributeは、trueかfalseを指定してください。',
-    'confirmed'            => ':attributeと、確認フィールドが、一致していません。',
+    'confirmed'            => ':attributeと確認フィールドが、一致していません。',
     'current_password'     => 'パスワードが正しくありません。',
     'date'                 => ':attributeには有効な日付を指定してください。',
     'date_equals'          => ':attributeには、:dateと同じ日付けを指定してください。',
@@ -120,7 +120,7 @@ return [
     'starts_with'          => ':attributeには、:valuesのどれかで始まる値を指定してください。',
     'string'               => ':attributeは文字列を指定してください。',
     'timezone'             => ':attributeには、有効なゾーンを指定してください。',
-    'unique'               => ':attributeの値は既に存在しています。',
+    'unique'               => ':attributeは既に存在しています。',
     'uploaded'             => ':attributeのアップロードに失敗しました。',
     'url'                  => ':attributeに正しい形式を指定してください。',
     'uuid'                 => ':attributeに有効なUUIDを指定してください。',
@@ -137,9 +137,13 @@ return [
     */
 
     'custom' => [
-        // 新規登録、パスワード再設定
         'password' => [
-            'confirmed' => 'パスワードと、パスワード(再確認)が、一致していません。',
+            'required' => 'パスワードを入力してください。',
+            'confirmed' => 'パスワードとパスワード(再確認)が、一致していません。',
+            'min' => 'パスワードは、8文字以上で指定してください。',
+        ],
+        'password_confirmation' => [
+            'required' => 'パスワード(再確認)を入力してください。',
         ],
     ],
 
