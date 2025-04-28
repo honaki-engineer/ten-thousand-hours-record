@@ -37,8 +37,8 @@ class NewPasswordController extends Controller
             'email.required' => 'メールアドレスを入力してください。',
             'email.email' => '正しいメールアドレス形式で入力してください。',
             'password.required' => '新しいパスワードを入力してください。',
-            'password.min' => '新しいパスワードは、8文字以上で指定してください。',
-            'password.confirmed' => '新しいパスワードと新しいパスワード(再確認)が、一致しません。',
+            'password.min' => '新しいパスワードは8文字以上で指定してください。',
+            'password.confirmed' => '新しいパスワードと新しいパスワード(再確認)が一致しません。',
         ]);
 
         // Here we will attempt to reset the user's password. If it is successful we

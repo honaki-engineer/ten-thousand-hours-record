@@ -22,8 +22,8 @@ class PasswordController extends Controller
             'current_password.required' => '現在のパスワードを入力してください。',
             'current_password.current_password' => '現在のパスワードが正しくありません。',
             'password.required' => '新しいパスワードを入力してください。',
-            'password.min' => '新しいパスワードは、8文字以上で指定してください。',
-            'password.confirmed' => '新しいパスワードと新しいパスワード(再確認)が、一致しません。',
+            'password.min' => '新しいパスワードは8文字以上で指定してください。',
+            'password.confirmed' => '新しいパスワードと新しいパスワード(再確認)が一致しません。',
         ]
     );
 
