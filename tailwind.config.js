@@ -11,6 +11,8 @@ module.exports = {
     safelist: [
         // ログイン画面
         'mb-2',
+        // プロフィール画面(削除)
+        'w-3/4',
       ],
 
     theme: {
