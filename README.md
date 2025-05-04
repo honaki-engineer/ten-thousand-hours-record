@@ -142,11 +142,11 @@ ten-thousand-hours-record/
 
 ## 開発環境
 
-PHP 8.1
-Laravel 9.x
-Composer 2.x
-Node.js 22.x (ローカル開発)
-Xserver (本番環境)
+- PHP 8.1
+- Laravel 9.x
+- Composer 2.x
+- Node.js 22.x (ローカル開発)
+- Xserver (本番環境)
 
 ※ Tailwind CSS のビルドはローカル (Node.js 18 以上推奨 )で実行し、本番環境 (Xserver) にはビルド済みの /public/build ディレクトリをアップロードしてください。
 
