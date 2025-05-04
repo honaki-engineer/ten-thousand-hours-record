@@ -116,6 +116,7 @@ php artisan serve
 
 ## 📂 ディレクトリ構成
 
+```txt
 ten-thousand-hours-record/
 ├── app/                     # アプリケーションロジック (モデル、サービスなど)
 ├── config/                  # 各種設定ファイル
@@ -135,6 +136,7 @@ ten-thousand-hours-record/
 ├── vite.config.js           # Vite設定
 ├── tailwind.config.js       # Tailwind CSSの設定
 └── README.md
+```
 
 ---
 
