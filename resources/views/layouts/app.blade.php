@@ -17,7 +17,7 @@
 </head>
 
 <body class="overflow-y-scroll font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen flex flex-col bg-gray-100">
         @include('layouts.navigation')
 
         <!-- Page Heading -->
@@ -30,9 +30,12 @@
         @endif
 
         <!-- Page Content -->
-        <main>
+        <main class="flex-grow">
             {{ $slot }}
         </main>
+
+        <!-- Page Footer -->
+        <x-footer />
     </div>
 </body>
 
