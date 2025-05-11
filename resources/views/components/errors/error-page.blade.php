@@ -33,7 +33,7 @@
 
     {{-- フッター --}}
     <footer class="shadow bg-gray-200 py-4 text-center text-sm text-gray-500">
-        © {{ date('Y') }} 1万時間学習記録
+        © {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
     </footer>
 
 </body>
