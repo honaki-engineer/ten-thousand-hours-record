@@ -127,12 +127,13 @@ ten-thousand-hours-record/
 │   └── index.php            # エントリーポイント
 ├── resources/
 │   ├── views/               # Bladeテンプレート
-│   └── css/js               # フロント系資産
+│   ├── css/                 # カスタムCSS
+│   └── js/                  # カスタムJS
 ├── routes/
 │   └── web.php              # ルーティング設定
 ├── .env.example             # 環境変数のテンプレート
 ├── composer.json            # PHPパッケージ管理
-├── package.json             # Node.js用パッケージ管理 (Tailwindなど)
+├── package.json             # Node.js用パッケージ管理 (Tailwind/Viteなど)
 ├── vite.config.js           # Vite設定
 ├── tailwind.config.js       # Tailwind CSSの設定
 └── README.md
@@ -148,13 +149,15 @@ ten-thousand-hours-record/
 - Node.js 22.x (ローカル開発)
 - Xserver (本番環境)
 
-※ Tailwind CSS のビルドはローカル (Node.js 18 以上推奨 )で実行し、本番環境 (Xserver) にはビルド済みの /public/build ディレクトリをアップロードしてください。
+※ Tailwind CSS のビルドはローカル環境 (Node.js 18 以上推奨) で実行し、  
+ビルド後に生成される `/public/build` ディレクトリを、そのまま本番環境 (Xserver) の公開ディレクトリにアップロードしてください。  
+(※ Xserver では Node.js が使えないため、必ずローカルでビルドしてください)
 
 ---
 
-## 本番環境の注意点（Xserver）
+## 本番環境の注意点 （Xserver）
 
-Xserver 上で Laravel アプリを本番公開する際の詳細な手順（SSH 接続、`.env` 設定、`.htaccess` 配置、`index.php` 修正、ビルドファイルの配置など）は、以下の記事にまとめています：
+Xserver 上で Laravel アプリを本番公開する際の詳細な手順 (SSH 接続、`.env` 設定、`.htaccess` 配置、`index.php` 修正、ビルドファイルの配置など) は、以下の記事にまとめています：
 
 - メインドメインの場合  
   https://qiita.com/honaki/items/bf82986954c7db568094
