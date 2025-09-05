@@ -104,7 +104,7 @@ DB_DATABASE=ten_thousand_hours_record
 DB_USERNAME=root
 DB_PASSWORD=root
 
-# # Mailpit を使う場合
+# Mailpit を使う場合
 MAIL_MAILER=smtp
 MAIL_HOST=localhost
 MAIL_PORT=1025
@@ -149,9 +149,9 @@ GUEST_LOGIN_TOKEN=guest123
 
 ## セットアップ手順
 
-1. リポジトリをクローン
+### 1. リポジトリをクローン
 ```bash
-git clone https://github.com/HondaAkihito/ten-thousand-hours-record.git
+git clone https://github.com/honaki-engineer/ten-thousand-hours-record.git
 cd ten-thousand-hours-record
 ```
 2. 環境変数を設定
@@ -159,12 +159,11 @@ cd ten-thousand-hours-record
 cp .env.example .env
 ```
 3. PHPパッケージをインストール
-### 開発
+開発
 ```bash
 composer install
 ```
-
-### 本番
+本番
 ```bash
 composer install --no-dev --optimize-autoloader
 ```
@@ -178,13 +177,13 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 6. フロントエンドビルド (Tailwind/Vite 使用時)
-### 開発
+開発
 ```bash
 npm install
 npm run dev
 ```
 
-### 本番
+本番
 ```bash
 npm install
 npm run build
