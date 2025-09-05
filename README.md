@@ -125,7 +125,7 @@ GUEST_LOGIN_TOKEN=guest123
 APP_NAME=1万時間学習記録
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://ten-thousand-hours-record.akkun1114.com
+APP_URL=https://example.com
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
