@@ -10,8 +10,10 @@
 
 ## デモサイト
 
-🔗 アプリ：<https://ten-thousand-hours-record.akkun1114.com/>  
-🔗 ゲストログイン（今すぐ試せます）：<https://ten-thousand-hours-record.akkun1114.com/guest-login?token=guest123>  
+🔗 アプリ  
+  <https://ten-thousand-hours-record.akkun1114.com/>  
+🔗 ゲストログイン（今すぐ試せます）  
+  <https://ten-thousand-hours-record.akkun1114.com/guest-login?token=guest123>  
 
 ### ゲストログイン情報
 - メールアドレス：不要
@@ -159,11 +161,11 @@ cd ten-thousand-hours-record
 cp .env.example .env
 ```
 3. PHPパッケージをインストール
-開発
+- 開発
 ```bash
 composer install
 ```
-本番
+- 本番
 ```bash
 composer install --no-dev --optimize-autoloader
 ```
@@ -177,13 +179,13 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 6. フロントエンドビルド (Tailwind/Vite 使用時)
-開発
+- 開発
 ```bash
 npm install
 npm run dev
 ```
 
-本番
+- 本番
 ```bash
 npm install
 npm run build
