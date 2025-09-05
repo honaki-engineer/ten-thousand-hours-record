@@ -151,7 +151,7 @@ GUEST_LOGIN_TOKEN=guest123
 
 ## セットアップ手順
 
-### 1. リポジトリをクローン
+1. リポジトリをクローン
 ```bash
 git clone https://github.com/honaki-engineer/ten-thousand-hours-record.git
 cd ten-thousand-hours-record
