@@ -151,8 +151,6 @@ GUEST_LOGIN_TOKEN=guest123
 
 ## セットアップ手順
 
-⭐️画像圧縮なども
-
 1. リポジトリをクローン
 ```bash
 git clone https://github.com/honaki-engineer/ten-thousand-hours-record.git
