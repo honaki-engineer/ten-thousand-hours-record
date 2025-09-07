@@ -178,7 +178,7 @@ php artisan key:generate
 ```bash
 php artisan migrate --seed
 ```
-6. フロントエンドビルド (Tailwind/Vite 使用時)
+6. フロントエンドビルド（Tailwind/Vite 使用時）
 - 開発
 ```bash
 npm install
@@ -191,7 +191,7 @@ npm install
 npm run build
 ```
 
-7. サーバー起動 (ローカル開発用)
+7. サーバー起動（ローカル開発用）
 ```bash
 php artisan serve
 ```
@@ -202,7 +202,7 @@ php artisan serve
 
 ```txt
 ten-thousand-hours-record/
-├── app/                     # アプリケーションロジック (モデル、サービスなど)
+├── app/                     # アプリケーションロジック（モデル、サービスなど）
 ├── config/                  # 各種設定ファイル
 ├── database/
 │   ├── migrations/          # マイグレーションファイル
@@ -217,7 +217,7 @@ ten-thousand-hours-record/
 │   └── web.php              # ルーティング設定
 ├── .env.example             # 環境変数のテンプレート
 ├── composer.json            # PHPパッケージ管理
-├── package.json             # Node.js用パッケージ管理 (Tailwind/Viteなど)
+├── package.json             # Node.js用パッケージ管理（Tailwind/Viteなど）
 ├── vite.config.js           # Vite設定
 ├── tailwind.config.js       # Tailwind CSSの設定
 └── README.md
@@ -227,7 +227,7 @@ ten-thousand-hours-record/
 
 ## 本番環境の注意点
 
-Xserver 上で Laravel アプリを本番公開する際の詳細な手順 (SSH 接続、`.env` 設定、`.htaccess` 配置、`index.php` 修正、ビルドファイルの配置など) は、以下の記事にまとめています：
+Xserver 上で Laravel アプリを本番公開する際の詳細な手順（SSH 接続、`.env` 設定、`.htaccess` 配置、`index.php` 修正、ビルドファイルの配置など）は、以下の記事にまとめています：
 
 - メインドメインの場合  
   https://qiita.com/honaki/items/bf82986954c7db568094
