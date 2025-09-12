@@ -123,7 +123,6 @@ php artisan key:generate
 php artisan migrate --seed
 ```
 6. フロントエンドビルド（Tailwind/Vite 使用時）
-- 開発
 ```bash
 npm install
 
