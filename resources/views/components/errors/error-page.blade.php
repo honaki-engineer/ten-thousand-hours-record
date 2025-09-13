@@ -25,10 +25,10 @@
     <main class="flex-grow flex flex-col justify-center items-center text-center px-4">
         <h2 class="text-xl font-bold mb-2">{{ $code }} | {{ $title }}</h2>
         <p class="mb-6">{!! $message !!}</p>
-        <button type="submit"
+        <a href="{{ route('trackers.index') }}"
             class="bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition text-lg">
-                <a href="{{ route('trackers.index') }}">1万時間記録に戻る</a>
-        </button>
+            1万時間記録に戻る
+        </a>
     </main>
 
     {{-- フッター --}}
