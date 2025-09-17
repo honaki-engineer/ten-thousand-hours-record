@@ -92,7 +92,7 @@ cd ten-thousand-hours-record
 cp .env.example .env
 ```
 .env の `DB_` 各項目などは、開発環境に応じて適宜変更してください。  
-- [.env 設定例](#env-設定例)
+- [.env 設定例（開発環境）](#env-設定例開発環境)
 3. PHPパッケージをインストール
 ```bash
 composer install
@@ -117,7 +117,7 @@ php artisan serve
 
 ---
 
-### .env 設定例
+### .env 設定例（開発環境）
 
 ```env
 APP_NAME=1万時間学習記録
