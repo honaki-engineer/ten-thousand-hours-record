@@ -143,7 +143,9 @@ MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
 # ゲストログイン
-GUEST_LOGIN_TOKEN=guest123
+GUEST_LOGIN_TOKEN=guest123    # ゲストログイントークン
+GUEST_PASSWORD=guestpassword  # ゲストログインのパスワード
+GUEST_EMAIL=guest@example.com # ゲストログインのメールアドレス
 ```
 
 ---
